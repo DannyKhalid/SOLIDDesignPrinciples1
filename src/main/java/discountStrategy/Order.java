@@ -2,6 +2,7 @@ package discountStrategy;
 
 public class Order {
     private double totalAmount;
+    private DiscountStrategy discountStrategy;
 
     public Order(double totalAmount) {
         this.totalAmount = totalAmount;
@@ -9,6 +10,17 @@ public class Order {
 
     public double getTotalAmount() {
         return totalAmount;
+    }
+
+    public void setDiscountStrategy(DiscountStrategy discountStrategy){
+        this.discountStrategy = discountStrategy;
+    }
+
+    public double applyDiscount() {
+        if (discountStrategy== null){
+            throw new IllegalStateException("Discount Strategy Not Set");
+        }
+        return discountStrategy.applyDiscount(this);
     }
 
     public double applyFlatDiscount() {

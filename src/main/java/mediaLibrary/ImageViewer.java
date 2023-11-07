@@ -1,6 +1,6 @@
 package mediaLibrary;
 
-class ImageViewer implements MediaPlayer {
+class ImageViewer implements DisplayableMedia, MediaInfo, MediaLoader{
     // Implementation skipped for brevity
     public void play() { /* Empty or exception-throwing method - not applicable for images */ }
     public void display() { /* Display image */ }

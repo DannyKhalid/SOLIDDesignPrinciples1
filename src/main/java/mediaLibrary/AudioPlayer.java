@@ -1,6 +1,6 @@
 package mediaLibrary;
 
-class AudioPlayer implements MediaPlayer {
+class AudioPlayer implements PlayableMedia, MediaInfo, MediaLoader {
     // Implementation skipped for brevity
     public void play() { /* Play audio */ }
     public void display() { /* Empty or exception-throwing method - not applicable for audio */ }
